@@ -1,6 +1,6 @@
 ---
 title: Markdown Sync
-source_page: examples/work.html
+source_page: examples/index.html
 status: editable-source
 ---
 
@@ -60,6 +60,19 @@ Name: Static by default
 Meta: HTML remains the artifact
 
 There is no runtime CMS, no client-side rendering requirement, and no package install needed for the basic workflow.
+
+## Quick Copy
+
+Title: Quick copy
+Install Command: mkdir -p scripts && curl -fsSL https://raw.githubusercontent.com/iruhdam1/markdown-html-sync/main/scripts/sync-markdown-content.mjs -o scripts/sync-markdown-content.mjs
+Copy Label: Copy script
+Copy URL: https://raw.githubusercontent.com/iruhdam1/markdown-html-sync/main/scripts/sync-markdown-content.mjs
+Codex Label: Use with Codex
+Codex URL: https://github.com/iruhdam1/markdown-html-sync/blob/main/skills/markdown-html-sync/SKILL.md
+Claude Label: Use with Claude
+Claude URL: https://github.com/iruhdam1/markdown-html-sync/blob/main/.claude/commands/markdown-sync.md
+
+Install just the sync script, or give your coding agent a ready-made workflow for adding markdown-driven copy to static HTML.
 
 ## Final CTA
 

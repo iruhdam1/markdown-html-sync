@@ -14,10 +14,19 @@ The idea is intentionally boring:
 Run the included landing-page example:
 
 ```sh
-node scripts/sync-markdown-content.mjs content/pages/work.md examples/work.html
+node scripts/sync-markdown-content.mjs content/pages/work.md examples/index.html
 ```
 
-Then open `examples/work.html` in a browser. The file name is intentionally plain so you can rename it for your own page.
+Then open `examples/index.html` in a browser.
+
+## Install Script Only
+
+Copy just the sync script into an existing static site:
+
+```sh
+mkdir -p scripts
+curl -fsSL https://raw.githubusercontent.com/iruhdam1/markdown-html-sync/main/scripts/sync-markdown-content.mjs -o scripts/sync-markdown-content.mjs
+```
 
 ## HTML Contract
 
@@ -79,3 +88,15 @@ Paths are normalized to lowercase slugs, so `## Walkthrough CTA` becomes `sectio
 5. Commit both the Markdown source and rendered HTML.
 
 No npm dependencies are required.
+
+## Use With Codex
+
+Copy `skills/markdown-html-sync/` into your Codex skills folder, then ask Codex to use the Markdown HTML Sync skill on a static page.
+
+## Use With Claude Code
+
+Copy `.claude/commands/markdown-sync.md` into another project. In Claude Code, run:
+
+```sh
+/markdown-sync content/pages/page.md path/to/page.html
+```

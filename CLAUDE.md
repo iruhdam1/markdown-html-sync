@@ -12,5 +12,5 @@ This repo is a vanilla static-site markdown sync starter.
 Primary example:
 
 ```sh
-node scripts/sync-markdown-content.mjs content/pages/work.md examples/work.html
+node scripts/sync-markdown-content.mjs content/pages/work.md examples/index.html
 ```

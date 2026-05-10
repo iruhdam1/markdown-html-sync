@@ -1,0 +1,4 @@
+interface:
+  display_name: "Markdown HTML Sync"
+  short_description: "Add markdown-driven copy sync to static HTML pages."
+  default_prompt: "Add Markdown HTML Sync to this static page."

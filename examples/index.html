@@ -211,6 +211,34 @@
         text-decoration: none;
       }
 
+      .quick-copy {
+        display: grid;
+        gap: 24px;
+      }
+
+      .quick-copy-head {
+        display: grid;
+        gap: 10px;
+        max-width: 720px;
+      }
+
+      .code-box {
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        background: #ece9e2;
+        padding: 18px;
+        color: var(--ink);
+        font: 0.95rem ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        white-space: nowrap;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
       .final-cta {
         display: grid;
         grid-template-columns: 1fr auto;
@@ -272,6 +300,8 @@
         .site-nav .button,
         .hero-actions,
         .hero-actions .button,
+        .button-row,
+        .button-row .button,
         .final-cta .button {
           width: 100%;
         }
@@ -347,6 +377,20 @@
             </div>
             <div data-md-html="sections.testimonials.children.jules.body"><p>There is no runtime CMS, no client-side rendering requirement, and no package install needed for the basic workflow.</p></div>
           </article>
+        </div>
+      </section>
+
+      <section class="quick-copy" aria-labelledby="quick-copy-title">
+        <div class="quick-copy-head">
+          <p class="section-label">Install</p>
+          <h2 id="quick-copy-title" data-md-text="sections.quick-copy.fields.title">Quick copy</h2>
+          <div class="lead" data-md-html="sections.quick-copy.body"><p>Install just the sync script, or give your coding agent a ready-made workflow for adding markdown-driven copy to static HTML.</p></div>
+        </div>
+        <pre class="code-box"><code data-md-text="sections.quick-copy.fields.install_command">mkdir -p scripts &amp;&amp; curl -fsSL https://raw.githubusercontent.com/iruhdam1/markdown-html-sync/main/scripts/sync-markdown-content.mjs -o scripts/sync-markdown-content.mjs</code></pre>
+        <div class="button-row">
+          <a class="button primary" data-md-text="sections.quick-copy.fields.copy_label" data-md-attr-href="sections.quick-copy.fields.copy_url" href="https://raw.githubusercontent.com/iruhdam1/markdown-html-sync/main/scripts/sync-markdown-content.mjs">Copy script</a>
+          <a class="button" data-md-text="sections.quick-copy.fields.codex_label" data-md-attr-href="sections.quick-copy.fields.codex_url" href="https://github.com/iruhdam1/markdown-html-sync/blob/main/skills/markdown-html-sync/SKILL.md">Use with Codex</a>
+          <a class="button" data-md-text="sections.quick-copy.fields.claude_label" data-md-attr-href="sections.quick-copy.fields.claude_url" href="https://github.com/iruhdam1/markdown-html-sync/blob/main/.claude/commands/markdown-sync.md">Use with Claude</a>
         </div>
       </section>
 
