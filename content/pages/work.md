@@ -12,7 +12,7 @@ Nav CTA URL: #example
 Headline: Edit static HTML pages from clean markdown files.
 Eyebrow: Want copy edits without a build system?
 Repo Label: Get repo
-Repo URL: #
+Repo URL: https://github.com/iruhdam1/markdown-html-sync
 
 Markdown Sync is a tiny vanilla pattern for keeping website copy in markdown while shipping plain HTML. Mark the editable regions once, run one Node script, and keep your layout exactly where it belongs.
 
@@ -65,7 +65,7 @@ There is no runtime CMS, no client-side rendering requirement, and no package in
 
 Title: Copy the pattern
 Repo Label: Get repo
-Repo URL: #
+Repo URL: https://github.com/iruhdam1/markdown-html-sync
 
 Start with one markdown file, one HTML page, and one sync script. Rename the example, change the sections, and keep shipping static HTML.
 
