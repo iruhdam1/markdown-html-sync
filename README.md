@@ -19,6 +19,35 @@ node scripts/sync-markdown-content.mjs content/pages/work.md examples/index.html
 
 Then open `examples/index.html` in a browser.
 
+## Folder Structure
+
+```txt
+.
+├── content/
+│   └── pages/
+│       ├── work.md              # Editable Markdown source for the example page
+│       └── hero-image.png       # Example page image asset
+├── examples/
+│   └── index.html               # Rendered static HTML page
+├── scripts/
+│   └── sync-markdown-content.mjs # Dependency-free one-way sync script
+├── skills/
+│   └── markdown-html-sync/       # Codex skill users can copy
+├── .claude/
+│   └── commands/
+│       └── markdown-sync.md      # Claude Code slash command users can copy
+├── README.md
+└── CLAUDE.md
+```
+
+The important pairing is:
+
+```txt
+content/pages/work.md -> examples/index.html
+```
+
+Edit the Markdown, run the sync script, and commit both the Markdown source and the rendered HTML.
+
 ## Install Script Only
 
 Copy just the sync script into an existing static site:
@@ -50,6 +79,25 @@ Supported attributes:
 
 The script fails before writing if any required path is missing.
 
+## Dos And Don'ts
+
+Do:
+
+- Keep Markdown as the copy-editing source.
+- Keep HTML as the shipped static artifact.
+- Mark only editable copy/link regions with `data-md-*`.
+- Keep paths stable after HTML references them, for example `sections.hero.fields.headline`.
+- Run the sync script after Markdown edits.
+- Review the diff before committing.
+
+Don't:
+
+- Do not use Markdown to control layout, CSS classes, image order, or JavaScript behavior.
+- Do not add a build system, package install, CMS, or client-side Markdown renderer for the basic workflow.
+- Do not hand-edit synced HTML copy and forget to update the Markdown source.
+- Do not rename Markdown headings that are already referenced by `data-md-*` unless you update the matching HTML paths too.
+- Do not ignore missing-section failures; they are there to prevent partial rewrites.
+
 ## Markdown Shape
 
 Use frontmatter for page metadata, `##` headings for sections, and optional field lines for structured values:
@@ -78,6 +126,17 @@ Secondary URL: https://linkedin.com/in/example
 ```
 
 Paths are normalized to lowercase slugs, so `## Walkthrough CTA` becomes `sections.walkthrough-cta`.
+
+## Editing Workflow
+
+1. Edit `content/pages/work.md`.
+2. Run:
+   ```sh
+   node scripts/sync-markdown-content.mjs content/pages/work.md examples/index.html
+   ```
+3. Open `examples/index.html` and check the page.
+4. Review the diff. Expected changes should be limited to Markdown-controlled text, lists, and attributes.
+5. Commit the Markdown and HTML together.
 
 ## Copying Into Another Static Site
 
