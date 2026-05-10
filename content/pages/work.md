@@ -73,4 +73,7 @@ Start with one markdown file, one HTML page, and one sync script. Rename the exa
 
 Brand: Markdown Sync
 Tagline: A vanilla markdown-to-HTML sync starter for static pages.
+Creator: Made by Madhuri Maram
+Twitter Label: @Iruhdam24
+Twitter URL: https://x.com/Iruhdam24
 Copyright: 2026 - Made with plain HTML, CSS, markdown, and Node.js.

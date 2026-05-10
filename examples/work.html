@@ -198,6 +198,19 @@
         color: var(--muted);
       }
 
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+        margin-top: 14px;
+      }
+
+      .footer-links a {
+        color: var(--ink);
+        font-weight: 800;
+        text-decoration: none;
+      }
+
       .final-cta {
         display: grid;
         grid-template-columns: 1fr auto;
@@ -349,6 +362,10 @@
         <div>
           <p class="brand" data-md-text="sections.footer.fields.brand">Markdown Sync</p>
           <p class="footer-copy" data-md-text="sections.footer.fields.tagline">A vanilla markdown-to-HTML sync starter for static pages.</p>
+          <p class="footer-links">
+            <span data-md-text="sections.footer.fields.creator">Made by Madhuri Maram</span>
+            <a data-md-text="sections.footer.fields.twitter_label" data-md-attr-href="sections.footer.fields.twitter_url" href="https://x.com/Iruhdam24">@Iruhdam24</a>
+          </p>
         </div>
         <p class="footer-copy" data-md-text="sections.footer.fields.copyright">2026 - Made with plain HTML, CSS, markdown, and Node.js.</p>
       </footer>
